@@ -5,18 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_02_Containers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="130" Width="350">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Button Grid.Column="0" Grid.Row="0" Content="Button 1"></Button>
-        <Button Grid.Column="1" Grid.Row="0" Content="Button 2"></Button>
-        <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Content="Button 3"></Button>
-    </Grid>
+        Title="MainWindow" Height="350" Width="350">
+    <Canvas>
+        <Button Content="Button 1" Canvas.Left="60"></Button>
+        <Button Content="Button 2" Canvas.Right="0" Canvas.Bottom="150"></Button>
+    </Canvas>
 </Window>
