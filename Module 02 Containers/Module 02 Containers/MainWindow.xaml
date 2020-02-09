@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_02_Containers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="350">
+        Title="MainWindow" Height="250" Width="550">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="1.7*"></ColumnDefinition>
             <ColumnDefinition Width="0.8*"></ColumnDefinition>
             <ColumnDefinition Width="0.6*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
