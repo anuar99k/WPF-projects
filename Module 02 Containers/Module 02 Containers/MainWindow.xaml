@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_02_Containers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="350">
-    <Canvas>
-        <Button Content="Button 1" Canvas.Left="60"></Button>
-        <Button Content="Button 2" Canvas.Right="0" Canvas.Bottom="150"></Button>
-    </Canvas>
+        Title="MainWindow" Height="150" Width="300">
+    <StackPanel>
+        <Button Content="Button 1"></Button>
+        <Button Content="Button 2"></Button>
+        <Button Content="Button 3"></Button>
+        <Button Content="Button 4"></Button>
+        <Button Content="Button 5"></Button>
+        <Button Content="Button 6"></Button>
+        <Button Content="Button 7"></Button>
+        <Button Content="Button 8"></Button>
+    </StackPanel>
 </Window>
