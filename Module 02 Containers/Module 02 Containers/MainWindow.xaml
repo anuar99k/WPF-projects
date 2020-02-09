@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Module_02_Containers"
         mc:Ignorable="d"
         Title="MainWindow" Height="150" Width="300">
-    <StackPanel>
+    <StackPanel Orientation="Horizontal">
         <Button Content="Button 1"></Button>
         <Button Content="Button 2"></Button>
         <Button Content="Button 3"></Button>
