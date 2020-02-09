@@ -6,14 +6,33 @@
         xmlns:local="clr-namespace:Module_02_Containers"
         mc:Ignorable="d"
         Title="MainWindow" Height="150" Width="300">
-    <StackPanel Orientation="Horizontal">
-        <Button Content="Button 1"></Button>
-        <Button Content="Button 2"></Button>
-        <Button Content="Button 3"></Button>
-        <Button Content="Button 4"></Button>
-        <Button Content="Button 5"></Button>
-        <Button Content="Button 6"></Button>
-        <Button Content="Button 7"></Button>
-        <Button Content="Button 8"></Button>
-    </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left">
+            <Button Content="Button 1"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Button 2"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button Content="Button 3"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right">
+            <Button Content="Button 6"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Button 5"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Button Content="Button 4"></Button>
+        </StackPanel>
+    </Grid>
 </Window>
