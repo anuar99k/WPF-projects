@@ -5,25 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_02_Containers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="150" Width="300">
-    <Grid>
-        <StackPanel HorizontalAlignment="Left">
-            <Button Content="Button 1"></Button>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 40">
-            <Button Content="Button 2"></Button>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 0 20">
-            <Button Content="Button 3"></Button>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 20 0 0">
-            <Button Content="Button 4"></Button>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 40 0 0">
-            <Button Content="Button 5"></Button>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom">
-            <Button Content="Button 6"></Button>
-        </StackPanel>
-    </Grid>
+        Title="MainWindow" Height="300" Width="300">
+    <DockPanel>
+        <Button Content="Left" DockPanel.Dock="Left"></Button>
+        <Button Content="Top" DockPanel.Dock="Top"></Button>
+        <Button Content="Right" DockPanel.Dock="Right"></Button>
+        <Button Content="Bottom" DockPanel.Dock="Bottom"></Button>
+        <Button Content="Center"></Button>
+    </DockPanel>
 </Window>
