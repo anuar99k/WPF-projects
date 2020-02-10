@@ -10,10 +10,12 @@
         <StackPanel Orientation="Horizontal">
             <Button Content="Test button 1"></Button>
             <Button Content="Test button 2"></Button>
-            <Button Content="Test button 3"></Button>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Height="45" Canvas.Top="20">
+        <StackPanel Orientation="Horizontal" Canvas.Top="20" Height="40">
+            <Button Content="Test button 3"></Button>
             <Button Content="Test button 4"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Canvas.Top="60">
             <Button Content="Test button 5"></Button>
             <Button Content="Test button 6"></Button>
         </StackPanel>
