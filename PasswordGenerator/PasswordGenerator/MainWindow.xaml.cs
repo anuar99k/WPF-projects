@@ -20,9 +20,23 @@ namespace PasswordGenerator
     /// </summary>
     public partial class MainWindow : Window
     {
+        Random rnd = new Random();
+        StringBuilder result = new StringBuilder();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnGeneratePassword_Click(object sender, RoutedEventArgs e)
+        {
+            result.Clear();
+            int pswrdSize = rnd.Next(6, 16);
+            for (int i = 0; i < pswrdSize; i++)
+            {
+                result.Append(((char)rnd.Next(33, 126)).ToString());
+            }
+            tbxResultOfGen.Text = result.ToString();
         }
     }
 }
