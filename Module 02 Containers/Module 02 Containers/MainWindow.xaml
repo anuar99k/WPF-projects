@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="300">
     <Canvas>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel>
             <Button Content="Test button 1"></Button>
             <Button Content="Test button 2"></Button>
             <Button Content="Test button 3"></Button>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Height="45" Canvas.Top="20">
+        <StackPanel Canvas.Left="73" Width="140">
             <Button Content="Test button 4"></Button>
             <Button Content="Test button 5"></Button>
             <Button Content="Test button 6"></Button>
