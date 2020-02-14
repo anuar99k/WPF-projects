@@ -5,17 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_02_Containers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300">
-    <Canvas>
-        <StackPanel>
-            <Button Content="Test button 1"></Button>
-            <Button Content="Test button 2"></Button>
-            <Button Content="Test button 3"></Button>
-        </StackPanel>
-        <StackPanel Canvas.Left="73" Width="140">
-            <Button Content="Test button 4"></Button>
-            <Button Content="Test button 5"></Button>
-            <Button Content="Test button 6"></Button>
-        </StackPanel>
-    </Canvas>
+        Title="MainWindow" Height="150" Width="310">
+    <StackPanel>
+        <Grid HorizontalAlignment="Left" Height="80" Width="270">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Content="Test button 1" Grid.Column="0" Grid.Row="0"></Button>
+            <Button Content="Test button 2" Grid.Column="0" Grid.Row="1"></Button>
+            <Button Content="Test button 3" Grid.Column="0" Grid.Row="2"></Button>
+
+            <Button Content="Test button 4" Grid.Column="1" Grid.Row="0"
+                    Grid.RowSpan="2"></Button>
+            <Button Content="Test button 5" Grid.Column="1" Grid.Row="2"></Button>
+            <Button Content="Test button 6" Grid.Column="2" Grid.Row="0"></Button>
+        </Grid>
+    </StackPanel>
 </Window>
