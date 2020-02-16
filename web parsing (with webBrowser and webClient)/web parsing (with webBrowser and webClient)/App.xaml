@@ -1,0 +1,9 @@
+﻿<Application x:Class="web_parsing__with_webBrowser_and_webClient_.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:web_parsing__with_webBrowser_and_webClient_"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
