@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:webScraping"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Информация об интересном на habr" Height="700" Width="450">
+    <TabControl>
+        <TabItem Header="Посты с habra">
+            <StackPanel x:Name="sp_wrapper">
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto"
+                              HorizontalScrollBarVisibility="Auto"
+                              CanContentScroll="True">
+                    <StackPanel x:Name="stackPanelPosts" Height="400">
+                    </StackPanel>
+                </ScrollViewer>
+
+                <Button Content="Получить информацию" x:Name="btnGetInfo"
+                        Click="BtnGetInfo_Click" Margin="70 20 70 10"
+                        FontSize="16" Padding="5"></Button>
+
+                <Button Content="Создать XML файл" x:Name="btnCreateXML"
+                        Click="BtnCreateXML_Click" Margin="70 10"
+                        FontSize="16" Padding="5"></Button>
+
+                <TextBox x:Name="tbxPathForSave" Margin="70 10"
+                    FontSize="16" Padding="5" Text="Путь для сохранения..."
+                    VerticalAlignment="Center" GotFocus="TbxPathForSave_GotFocus"
+                         LostFocus="TbxPathForSave_LostFocus"></TextBox>
+
+                <Label x:Name="lblInfo"></Label>
+
+            </StackPanel>
+        </TabItem>
+
+        <TabItem Header="habr.com">
+            <WebBrowser Grid.Column="0" Grid.Row="0"
+                    x:Name="webBrowser">
+            </WebBrowser>
+        </TabItem>
+
+    </TabControl>
 </Window>
