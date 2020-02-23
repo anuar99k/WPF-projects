@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_03__tests_app_"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="600">
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
         
+        <Menu Grid.Row="0" VerticalAlignment="Center">
+            <MenuItem Header="Меню" FontSize="14" Padding="10 0">
+                <MenuItem Header="Создать тест" x:Name="createTest"
+                          Click="CreateTest_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Frame Grid.Row="1" HorizontalAlignment="Center" NavigationUIVisibility="Hidden"
+               VerticalAlignment="Center" x:Name="mainFrame"></Frame>
     </Grid>
 </Window>

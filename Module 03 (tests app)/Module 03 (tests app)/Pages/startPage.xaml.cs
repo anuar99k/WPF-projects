@@ -12,29 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Module_03__tests_app_.Pages;
 
-namespace Module_03__tests_app_
+namespace Module_03__tests_app_.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for startPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class startPage : Page
     {
-        public static Frame MainFrame_ = null;
-
-        public MainWindow()
+        public startPage()
         {
             InitializeComponent();
-
-            MainWindow.MainFrame_ = mainFrame;
-
-            MainFrame_.Navigate(new startPage());
-        }
-
-        private void CreateTest_Click(object sender, RoutedEventArgs e)
-        {
-            mainFrame.Navigate(new CreateTestForm());
         }
     }
 }
