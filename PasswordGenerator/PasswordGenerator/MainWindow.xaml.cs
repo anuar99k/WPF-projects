@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using PasswordGenerator.Pages;
+using System;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PasswordGenerator
 {
@@ -22,10 +13,16 @@ namespace PasswordGenerator
     {
         Random rnd = new Random();
         StringBuilder result = new StringBuilder();
-
+        
+        public static Frame AuthFrame_ = null;
+        
         public MainWindow()
         {
             InitializeComponent();
+
+            AuthFrame_ = authFrame;
+
+            AuthFrame_.Navigate(new PageAuth());
         }
 
         private void BtnGeneratePassword_Click(object sender, RoutedEventArgs e)

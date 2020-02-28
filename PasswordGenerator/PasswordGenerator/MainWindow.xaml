@@ -6,48 +6,55 @@
         xmlns:local="clr-namespace:PasswordGenerator"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="450">
-    <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.7*"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="0.7*"></RowDefinition>
-        </Grid.RowDefinitions>
+    <TabControl>
+        <TabItem Header="Генерация пароля" FontSize="14">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.7*"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="0.7*"></RowDefinition>
+                </Grid.RowDefinitions>
 
-        <Label Content="Генератор пароля" HorizontalAlignment="Center"
-               VerticalAlignment="Center" FontSize="26" Grid.Row="0"></Label>
+                <Label Content="Генератор пароля" HorizontalAlignment="Center"
+               VerticalAlignment="Center" FontSize="24" Grid.Row="0"></Label>
 
-        <StackPanel Grid.Row="1">
-            <Label Content="Генерация пароля на основе требований:" 
-                   FontSize="18" HorizontalAlignment="Center"></Label>
-            
-            <Label Content="1) минимальная длина пароля 6 символов;" 
-                   FontSize="18" Padding="10 5 0 5"></Label>
+                <StackPanel Grid.Row="1">
+                    <Label Content="Генерация пароля на основе требований:" 
+                   FontSize="16" HorizontalAlignment="Center"></Label>
 
-            <TextBlock TextWrapping="Wrap" FontSize="18" Padding="10 5 0 5">
+                    <Label Content="1) минимальная длина пароля 6 символов;" 
+                   FontSize="16" Padding="10 5 0 5"></Label>
+
+                    <TextBlock TextWrapping="Wrap" FontSize="16" Padding="10 5 0 5">
                    2) пароль должен состоять из различных групп
                    символов (малые и большие латинские буквы, цифры, 
                    специальные символы '(', ')', '#' и т.д.)";
-            </TextBlock>
+                    </TextBlock>
 
-            <TextBlock TextWrapping="Wrap" FontSize="18" Padding="10 5 0 0">
+                    <TextBlock TextWrapping="Wrap" FontSize="16" Padding="10 5 0 0">
                 3) в качестве пароля не должны использоваться реальные слова, 
                 имена, фамилии и т.д.
-            </TextBlock>
-        </StackPanel>
+                    </TextBlock>
+                </StackPanel>
 
-        <Button Content="Сгенерировать" VerticalAlignment="Center"
-            Margin="80 20 " Height="50" FontSize="18" Grid.Row="2"
+                <Button Content="Сгенерировать" VerticalAlignment="Center"
+            Margin="80 20 " Height="50" FontSize="16" Grid.Row="2"
             x:Name="btnGeneratePassword" Click="BtnGeneratePassword_Click"/>
 
-        <StackPanel Grid.Row="3">
+                <StackPanel Grid.Row="3">
 
-            <Label Content="Результат генерации: " FontSize="18"
+                    <Label Content="Результат генерации: " FontSize="16"
                    HorizontalAlignment="Center"></Label>
-            
-            <TextBox  x:Name="tbxResultOfGen" HorizontalAlignment="Center"
-                     FontSize="20" TextWrapping="Wrap"></TextBox>
-        </StackPanel>
-        
-    </Grid>
+
+                    <TextBox  x:Name="tbxResultOfGen" HorizontalAlignment="Center"
+                     FontSize="18" TextWrapping="Wrap"></TextBox>
+                </StackPanel>
+
+            </Grid>
+        </TabItem>
+        <TabItem Header="Аутентификация" FontSize="14">
+            <Frame x:Name="authFrame" NavigationUIVisibility="Hidden"></Frame>
+        </TabItem>
+    </TabControl>
 </Window>
