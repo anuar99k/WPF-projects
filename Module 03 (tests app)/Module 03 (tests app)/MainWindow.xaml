@@ -14,13 +14,17 @@
         </Grid.RowDefinitions>
         
         <Menu Grid.Row="0" VerticalAlignment="Center">
-            <MenuItem Header="Меню" FontSize="14" Padding="10 0">
-                <MenuItem Header="Создать тест" x:Name="createTest"
-                          Click="CreateTest_Click"></MenuItem>
+            <MenuItem Header="Меню" FontSize="14" Padding="10 0"
+                      x:Name="miMainMenu">
+                <MenuItem Header="Войти" x:Name="btnLogin"
+                          Click="BtnLogin_Click"/>
+                <MenuItem Header="Зарегистрироваться" x:Name="btnRegister"
+                          Click="BtnRegister_Click"/>
             </MenuItem>
         </Menu>
 
-        <Frame Grid.Row="1" HorizontalAlignment="Center" NavigationUIVisibility="Hidden"
+        <Frame Grid.Row="1" HorizontalAlignment="Center" 
+               NavigationUIVisibility="Hidden"
                VerticalAlignment="Center" x:Name="mainFrame"></Frame>
     </Grid>
 </Window>

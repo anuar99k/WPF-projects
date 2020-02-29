@@ -22,19 +22,27 @@ namespace Module_03__tests_app_
     public partial class MainWindow : Window
     {
         public static Frame MainFrame_ = null;
+        public static MenuItem miMainMenu_ = null;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            MainWindow.MainFrame_ = mainFrame;
+            MainFrame_ = mainFrame;
 
             MainFrame_.Navigate(new startPage());
+
+            miMainMenu_ = miMainMenu;
         }
 
-        private void CreateTest_Click(object sender, RoutedEventArgs e)
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new CreateTestForm());
+            MainFrame_.Navigate(new LoginPage());
+        }
+
+        private void BtnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame_.Navigate(new RegisterPage());
         }
     }
 }
