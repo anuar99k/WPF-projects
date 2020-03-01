@@ -32,5 +32,9 @@
         <Label Content="Вопросы" FontSize="16"
                HorizontalAlignment="Center"></Label>
         <StackPanel x:Name="spQuestionsWrapper"></StackPanel>
+        <Button Content="Завершить" x:Name="btnFinishTest"
+                Width="120" FontSize="16"
+                Padding="7"
+                Click="BtnFinishTest_Click"></Button>
     </StackPanel>
 </Page>
