@@ -9,7 +9,8 @@
       MinHeight="500" MinWidth="580"
       Title="CreateTestForm">
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  x:Name="svMainWrapper">
         <Grid Background="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.5*"></RowDefinition>

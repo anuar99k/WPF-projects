@@ -35,6 +35,8 @@ namespace Module_03__tests_app_.Pages
                 {
                     if (user.Login == _user.Login && user.Password == _user.Password)
                     {
+                        DBcontext.currentUser = _user;
+
                         MenuItem miCreateTest = new MenuItem();
                         miCreateTest.Header = "Создать тест";
                         miCreateTest.Click += CreateTest_Click;
@@ -44,6 +46,7 @@ namespace Module_03__tests_app_.Pages
                         miEditTests.Click += EditTest_Click;
 
                         MainWindow.miMainMenu_.Items.Add(miCreateTest);
+                        MainWindow.miMainMenu_.Items.Add(miEditTests);
 
                         MainWindow.miMainMenu_.Items.RemoveAt(0);
                         MainWindow.miMainMenu_.Items.RemoveAt(0);

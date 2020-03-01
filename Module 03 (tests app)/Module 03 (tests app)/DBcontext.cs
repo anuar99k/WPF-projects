@@ -9,6 +9,8 @@ namespace Module_03__tests_app_
 {
     class DBcontext
     {
+        public static User currentUser { get; set; }
+
         public List<User> GetAllUsers()
         {
             List<User> users = new List<User>();

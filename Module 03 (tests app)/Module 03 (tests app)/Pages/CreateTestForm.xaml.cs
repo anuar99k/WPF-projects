@@ -21,12 +21,43 @@ namespace Module_03__tests_app_.Pages
     /// <summary>
     /// Interaction logic for CreateTestForm.xaml
     /// </summary>
+
+    [Serializable]
+    public class Test
+    {
+        public Test() { }
+        [XmlAttribute]
+        public int id { get; set; }
+        [XmlAttribute]
+        public string author { get; set; }
+        public string language { get; set; }
+        public string nameOfSection { get; set; }
+        public string desription { get; set; }
+        public List<question> questions { get; set; }
+    }
+
+    [Serializable]
+    public class question
+    {
+        public question() { }
+        public question(int id, string questionText, List<string> answers, string correctAnswer)
+        {
+            this.id = id;
+            this.questionText = questionText;
+            this.answers = answers;
+            this.correctAnswer = correctAnswer;
+        }
+        public int id { get; set; }
+        public string questionText { get; set; }
+        public List<string> answers { get; set; }
+        public string correctAnswer { get; set; }
+    }
+
     public partial class CreateTestForm : Page
     {
         public CreateTestForm()
         {
             InitializeComponent();
-            
         }
         
         private void AddQuestionBtn_Click(object sender, RoutedEventArgs e)
@@ -74,33 +105,6 @@ namespace Module_03__tests_app_.Pages
             spQuestionsWrapper.Children.Add(oneQuestionWrapper);
         }
 
-        [Serializable]
-        public class Test
-        {
-            public Test(){}
-            public string language { get; set; }
-            public string nameOfSection { get; set; }
-            public string desription { get; set; }
-            public List<question> questions { get; set; }
-        }
-
-        [Serializable]
-        public class question
-        {
-            public question(){}
-            public question(int id, string questionText, List<string> answers, string correctAnswer)
-            {
-                this.id = id;
-                this.questionText = questionText;
-                this.answers = answers;
-                this.correctAnswer = correctAnswer;
-            }
-            public int id { get; set; }
-            public string questionText { get; set; }
-            public List<string> answers { get; set; }
-            public string correctAnswer { get; set; }
-        }
-
         private void BtnSaveTest_Click(object sender, RoutedEventArgs e)
         {
             XmlSerializer formatter = new XmlSerializer(typeof(List<Test>));
@@ -109,13 +113,15 @@ namespace Module_03__tests_app_.Pages
 
             if (new FileInfo("questions.xml").Length != 0)
             {
-                using (FileStream fs = new FileStream("questions.xml", FileMode.OpenOrCreate))
+                using (FileStream fs = new FileStream("questions.xml", FileMode.Open))
                 {
                     oldTests = (List<Test>)formatter.Deserialize(fs);
                 }
             }
 
             Test newTest = new Test();
+            newTest.id = oldTests.Count + 1;
+            newTest.author = DBcontext.currentUser.Login;
             newTest.language = cmbxLang.Text;
             newTest.nameOfSection = tbxNameOfSection.Text;
             newTest.desription = tbxDescription.Text;
@@ -158,6 +164,7 @@ namespace Module_03__tests_app_.Pages
             {
                 formatter.Serialize(fs, oldTests);
             }
+            svMainWrapper.IsEnabled = false;
             MessageBox.Show("Тест успешно сохранен");
             MainWindow.MainFrame_.Navigate(new startPage());
         }

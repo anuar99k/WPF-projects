@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_03__tests_app_"
-        mc:Ignorable="d"
+        mc:Ignorable="d" x:Name="MainWindow_"
         Title="MainWindow" Height="550" Width="600">
     <Grid>
 
@@ -23,8 +23,8 @@
             </MenuItem>
         </Menu>
 
-        <Frame Grid.Row="1" HorizontalAlignment="Center" 
+        <Frame Grid.Row="1" HorizontalAlignment="Stretch" 
                NavigationUIVisibility="Hidden"
-               VerticalAlignment="Center" x:Name="mainFrame"></Frame>
+               VerticalAlignment="Stretch" x:Name="mainFrame"></Frame>
     </Grid>
 </Window>
