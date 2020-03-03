@@ -5,8 +5,103 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_07"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="600">
+    <TabControl>
+        <TabItem Header="Movavi Screen Capture Studio">
+            <StackPanel Background="LightCyan">
+                <Label Content="Movavi Screen Capture Studio"
+                   FontSize="26" FontWeight="SemiBold"
+                   HorizontalAlignment="Center"/>
+                <Label Content="The perfect way to record from your screen"
+                       FontSize="18" FontWeight="Medium"/>
+                <Label Content="Capture video from your computer screen" FontSize="14"/>
+                <Label Content="Grab sound from multiple sources" FontSize="14"/>
+                <Label Content="Tweak videos with the built-in editor" FontSize="14"/>
+                <Label Content="Save videos in any popular format" FontSize="14"/>
+                <DockPanel Margin="20 30">
+                    <StackPanel>
+                        <Button Content="Download for Free"
+                                Padding="10 25" FontSize="16"
+                                Background="Aquamarine"
+                                BorderThickness="0"
+                                Margin="0 0 0 5"
+                                x:Name="button_1_1"
+                                GotFocus="Button_1_1_GotFocus"/>
+                        <TextBlock Text="More about the Windows version"
+                                   FontSize="16" Foreground="MediumBlue"
+                                   TextDecorations="underline"
+                                   x:Name="textBlock_1_1"
+                                   GotFocus="TextBlock_1_1_GotFocus"/>
+                    </StackPanel>
+                    <StackPanel Margin="60 0 0 0" HorizontalAlignment="Right">
+                        <Button Content="Download for Free"
+                                Padding="10 25" FontSize="16"
+                                Background="Aquamarine"
+                                BorderThickness="0"
+                                Margin="0 0 0 5"
+                                x:Name="button_1_2"
+                                GotFocus="Button_1_2_GotFocus"></Button>
+                        <TextBlock Text="More about the Mac version"
+                                   FontSize="16" TextDecorations="underline"
+                                   Foreground="MediumBlue"
+                                   x:Name="textBlock_1_2"
+                                   GotFocus="TextBlock_1_2_GotFocus"/>
+                    </StackPanel>
+                </DockPanel>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="See Other Useful How-to Guides">
+            <StackPanel>
+                <Label Content="See Other Useful How-to Guides"
+                   FontSize="26" FontWeight="SemiBold"
+                   HorizontalAlignment="Center"/>
+                
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Image as a background">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/slide_1.jpg"
+                                x:Name="bgImage"></ImageBrush>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="0" Grid.Row="4">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                        <RadioButton Checked="RadioButton_Checked" IsChecked="True"></RadioButton>
+                        <RadioButton Checked="RadioButton_Checked_1"></RadioButton>
+                        <RadioButton Checked="RadioButton_Checked_2"></RadioButton>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="4">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                        <Button Content="Learn more >"
+                                Padding="20 10"
+                                FontSize="14" Foreground="White"
+                                Background="Transparent"
+                                BorderBrush="White"></Button>
+                        <Button Content="Download for Free"
+                                Padding="20 10"
+                                FontSize="14" Foreground="White"
+                                Background="CornflowerBlue"
+                                BorderThickness="0"
+                                Margin="15 0 0 0"></Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+    </TabControl>
 </Window>

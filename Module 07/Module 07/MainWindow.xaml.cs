@@ -24,5 +24,40 @@ namespace Module_07
         {
             InitializeComponent();
         }
+
+        private void Button_1_1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            button_1_1.Background = Brushes.MediumAquamarine;
+        }
+
+        private void Button_1_2_GotFocus(object sender, RoutedEventArgs e)
+        {
+            button_1_2.Background = Brushes.MediumAquamarine;
+        }
+
+        private void TextBlock_1_2_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBlock_1_2.TextDecorations = null;
+        }
+
+        private void TextBlock_1_1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBlock_1_1.TextDecorations = null;
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            bgImage.ImageSource = new BitmapImage(new Uri(@"slide_1.jpg", UriKind.Relative));
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            bgImage.ImageSource = new BitmapImage(new Uri(@"slide_2.jpg", UriKind.Relative));
+        }
+
+        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        {
+            bgImage.ImageSource = new BitmapImage(new Uri(@"slide_4.jpg", UriKind.Relative));
+        }
     }
 }
