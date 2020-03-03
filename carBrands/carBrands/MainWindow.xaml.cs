@@ -34,6 +34,7 @@ namespace carBrands
             foreach(string carBrand in carBrands)
             {
                 Button btn = new Button() { Background = Brushes.Transparent, BorderThickness = new Thickness(0, 0, 0, 0) };
+                btn.Width = 150;
                 StackPanel spBtnContent = new StackPanel() { Orientation = Orientation.Horizontal };
                 Image img = new Image() { Width = 50, Height = 50 };
                 img.Source = new BitmapImage(new Uri(carBrand, UriKind.Relative));
@@ -42,7 +43,7 @@ namespace carBrands
                 //textOfBtn.TextDecorations = 
                 textOfBtn.Padding = new Thickness(5, 5, 5, 5);
                 textOfBtn.FontSize = 16;
-                textOfBtn.Text = carBrand.Split('\\')[1].Split('.')[0];
+                textOfBtn.Text = carBrand.Split('\\')[1].Split('.')[0].ToUpper();
                 spBtnContent.Children.Add(img);
                 spBtnContent.Children.Add(textOfBtn);
                 btn.Content = spBtnContent;

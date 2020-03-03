@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -84,6 +85,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -94,6 +96,110 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="bin\Debug\Images\abarth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\alfa romeo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\audi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\bmw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\chevrolet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\chrysler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\citroen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\dacia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\dodge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\fiat professional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\fiat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\ford.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\honda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\infiniti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\isuzu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\jeep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\kia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\lancia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\landrover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\lexus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\mazda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\mercedes-benz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\mitsubishi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\nissan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\opel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\peugeot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\porsche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\ram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\renault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\seat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\skoda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\smart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\ssangyong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\subaru %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\volvo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
