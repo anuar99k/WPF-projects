@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:carBrands"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+
+    <TabControl>
+        <TabItem Header="Каталог производителей">
+            <WrapPanel x:Name="buttonsWrapper"> 
+                <!--<Button Background="Transparent"
+                        BorderThickness="0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\Anuarito\source\repos\WPF projects\carBrands\carBrands\Images\isuzu.png"
+                               Width="50"
+                               Height="50"></Image>
+                        <TextBlock Text="abath"
+                                   VerticalAlignment="Center"
+                                   TextDecorations="underline"
+                                   Padding="5"
+                                   FontSize="16"/>
+                    </StackPanel>
+                </Button>-->
+            </WrapPanel>
+        </TabItem>
+        <TabItem Header="VIN номер">
+
+        </TabItem>
+        <TabItem Header="Номер детали">
+
+        </TabItem>
+    </TabControl>
 </Window>
