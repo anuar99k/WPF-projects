@@ -17,6 +17,16 @@
                     VerticalAlignment="Center"
                     Orientation="Horizontal"
                     Margin="10">
+            <Label Content="Логин :" FontSize="16"></Label>
+            <TextBox FontSize="16"
+                     VerticalAlignment="Center"
+                     MinWidth="150"
+                     x:Name="tbxLogin"></TextBox>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal"
+                    Margin="10">
             <Label Content="ФИО :" FontSize="16"></Label>
             <TextBox FontSize="16"
                      VerticalAlignment="Center"
@@ -29,6 +39,15 @@
                     Margin="10">
             <Label Content="Дата рождения :" FontSize="16"></Label>
             <DatePicker x:Name="dpBirthDate"></DatePicker>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal"
+                    Margin="10">
+            <Label Content="Пароль :" FontSize="16"></Label>
+            <PasswordBox MinWidth="150" FontSize="16"
+                         VerticalAlignment="Center"
+                         x:Name="pswPassword"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center">
             <Button Content="Зарегистрироваться"
