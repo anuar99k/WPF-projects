@@ -5,8 +5,235 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_04__Wikipedia_"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="800" Width="1300">
+    
+    <Window.Resources>
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0.5"/>
+        </Style>
+    </Window.Resources>
+
+    <DockPanel>
+        <StackPanel x:Name="spLeftBar"
+                    DockPanel.Dock="Left"
+                    Width="200"
+                    Background="#f6f6f6">
+
+            <Image Source="Images\wikiLogo.PNG"
+                   Width="130" Height="130" Margin="20"></Image>
+
+            <StackPanel  Margin="20" >
+                <Label>Заглавная страница</Label>
+                <Label>Рубрикация</Label>
+                <Label>Указатель А — Я</Label>
+                <Label>Избранные статьи</Label>
+                <Label>Случайная статья</Label>
+                <Label>Текущие события</Label>
+            </StackPanel>
+
+            <StackPanel Margin="20">
+                <Label>Участие</Label>
+                <StackPanel>
+                    <Label Foreground="#2250b2">Сообщить об ошибке</Label>
+                    <Label Foreground="#2250b2">Сообщество</Label>
+                    <Label Foreground="#2250b2">Форум</Label>
+                    <Label Foreground="#2250b2">Свежие правки</Label>
+                    <Label Foreground="#2250b2">Новые страницы</Label>
+                    <Label Foreground="#2250b2">Справка</Label>
+                    <Label Foreground="#2250b2">Пожертвовать</Label>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+
+        <ToolBarOverflowPanel x:Name="tbopTopBar"
+                              DockPanel.Dock="Top"
+                              Background="White"
+                              HorizontalAlignment="Right"
+                              Margin="15">
+
+            <StackPanel Orientation="Horizontal" Margin="5 0">
+                <Image Source="Images\personImage.PNG" 
+                       Width="17"></Image>
+                <Label>Вы не представились системе</Label>
+            </StackPanel>
+
+            <Label Margin="5 0">Обсуждение</Label>
+            <Label Margin="5 0">Вклад</Label>
+            <Label Margin="5 0">Создать учетную запись</Label>
+            <Label Margin="5 0">Войти</Label>
+        </ToolBarOverflowPanel>
+
+        <StackPanel  x:Name="spBottomBar"
+                     DockPanel.Dock="Bottom"
+                     Background="#f6f6f6">
+
+            <TextBlock FontSize="12" TextWrapping="Wrap">
+                Текст доступен по лицензии Creative Commons Attribution-ShareAlike;
+                в отдельных случаях могут действовать дополнительные условия. 
+                Подробнее см. Условия использования.
+            </TextBlock>
+
+            <TextBlock FontSize="12" TextWrapping="Wrap">Wikipedia® — зарегистрированный товарный знак некоммерческой 
+                организации Wikimedia Foundation, Inc.
+            </TextBlock>
+
+            <WrapPanel Orientation="Horizontal">
+                <Label FontSize="12">Политика конфиденциальности</Label>
+                <Label FontSize="12">Описание Википедии</Label>
+                <Label FontSize="12">Отказ от ответственности</Label>
+                <Label FontSize="12">Свяжитесь с нами</Label>
+                <Label FontSize="12">Разработчики</Label>
+                <Label FontSize="12">Статистика</Label>
+                <Label FontSize="12">Заявление о куки</Label>
+                <Label FontSize="12">Мобильная версия</Label>
+            </WrapPanel>
+
+        </StackPanel>
+
+        <TabControl x:Name="spCenterBar"
+                    Background="LightCyan"
+                    VerticalContentAlignment="Top">
+
+            <TabItem Header="Заглавная">
+
+                <StackPanel>
+
+                    <StackPanel>
+                        <Border Height="130"
+                        VerticalAlignment="Top"
+                        Margin="20"
+                        Background="#f8f9fa"
+                        Style="{StaticResource BorderStyle}">
+
+                            <FlowDocumentScrollViewer VerticalScrollBarVisibility="Hidden"
+                                              HorizontalScrollBarVisibility="Hidden">
+
+                                <FlowDocument>
+                                    <Table>
+                                        <Table.Columns>
+                                            <TableColumn></TableColumn>
+                                            <TableColumn></TableColumn>
+                                        </Table.Columns>
+
+                                        <TableRowGroup>
+                                            <TableRow>
+                                                <TableCell TextAlignment="Left">
+                                                    <Paragraph FontSize="25"
+                                                       Margin="0 10">Добро пожаловать в
+                                                        <Span Foreground="#0645ad">Википедию</Span> ,
+                                                    </Paragraph>
+                                                    <Paragraph FontSize="12">свободную энциклопедию, которую
+                                                        <Span Foreground="#0645ad">может редактировать каждый.</Span>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell TextAlignment="Right">
+                                                    <Paragraph  Margin="0 10">Сейчас в Википедии
+                                                        <Span Foreground="#0645ad">1 600 148 статей</Span> на
+                                                        <Span Foreground="#0645ad">русском языке.</Span>
+                                                    </Paragraph>
+                                                    <Paragraph Margin="10">
+                                                        <Span BaselineAlignment="Center">
+                                                            <Bold>Порталы</Bold>
+                                                            <Bold>Справка</Bold>
+                                                            <Button Background="#f8f9fa"
+                                                        Padding="5">
+                                                                <Bold>Создать статью</Bold>
+                                                            </Button>
+                                                        </Span>
+                                                    </Paragraph>
+                                                </TableCell>
+                                            </TableRow>
+                                        </TableRowGroup>
+                                    </Table>
+                                </FlowDocument>
+                            </FlowDocumentScrollViewer>
+                        </Border>
+                    </StackPanel>
+
+                    <FlowDocumentScrollViewer VerticalScrollBarVisibility="Hidden"
+                                              HorizontalScrollBarVisibility="Hidden">
+                        <FlowDocument>
+                            <Table>
+                                <Table.Columns>
+                                    <TableColumn></TableColumn>
+                                    <TableColumn></TableColumn>
+                                </Table.Columns>
+
+                                <TableRowGroup>
+                                    <TableRow>
+                                        <TableCell>
+                                            <Section BorderBrush="Gray" BorderThickness="0.5" Background="White" Padding="20" Margin="0 0 15 0">
+                                                <Paragraph>Избранная статья
+                                            Операция «Ход конём»
+                                            Иосип Броз Тито (первый справа) и его соратники в Дрваре, 14 мая 1944 года
+                                            Операция «Ход конём» (нем. Unternehmen «Rösselsprung»), в югославской 
+                                            историографии также известна как «Седьмое вражеское наступление» или Десант на
+                                            Дрвар (сербохорв. Десант на Дрвар / Desant na Drvar) — комбинированная воздушно-десантная
+                                            и сухопутная наступательная операция войск 2-й танковой армии вермахта во время
+                                            Второй мировой войны. Проводилась в Западной Боснии в районе Бугойно — Яйце — 
+                                            Баня-Лука — Приедор — Бихач — Книн в период с 25 мая по 6 июня 1944 года с целью
+                                            уничтожения Верховного штаба НОАЮ в городе Дрвар, а также находившихся при нём 
+                                            учреждений народно-освободительного движения Югославии и союзных военных миссий. 
+                                            В операции участвовали 500-й парашютно-десантный батальон СС, а также части 15-го
+                                            горнопехотного армейского корпуса и 5-го горнопехотного корпуса СС.
+                                            
+                                            Операция «Ход конём» являет собой особую веху в войне вермахта против НОАЮ, поскольку
+                                            она имела целью возвращение стратегической инициативы, утраченной после капитуляции
+                                            Италии 8 сентября 1943 года. В результате ожесточённых боёв и ценой высоких потерь
+                                            немецкие войска овладели Дрваром, захватили штаб-квартиру партизан и её систему 
+                                            военной связи, нанесли значительный урон 1-й и 6-й пролетарским дивизиям, а также
+                                            на какое-то время расстроили систему руководства НОАЮ и вынудили югославов временно
+                                            прекратить активность в данном районе. Однако основная цель — уничтожение Верховного
+                                            штаба и самого И. Броза Тито — не была достигнута. Операция стала последней попыткой
+                                            немецкого командования изменить развитие ситуации в Югославии в свою пользу, а также
+                                            единственным случаем безуспешного применения немецкого воздушного десанта во Второй
+                                            мировой войне.
+                                                </Paragraph>
+                                            </Section>
+                                        </TableCell>
+
+                                        <TableCell>
+                                            <Section BorderBrush="Gray" BorderThickness="0.5" Background="White" Padding="20">
+                                                <Paragraph>Избранная статья
+                                            Операция «Ход конём»
+                                            Иосип Броз Тито (первый справа) и его соратники в Дрваре, 14 мая 1944 года
+                                            Операция «Ход конём» (нем. Unternehmen «Rösselsprung»), в югославской 
+                                            историографии также известна как «Седьмое вражеское наступление» или Десант на
+                                            Дрвар (сербохорв. Десант на Дрвар / Desant na Drvar) — комбинированная воздушно-десантная
+                                            и сухопутная наступательная операция войск 2-й танковой армии вермахта во время
+                                            Второй мировой войны. Проводилась в Западной Боснии в районе Бугойно — Яйце — 
+                                            Баня-Лука — Приедор — Бихач — Книн в период с 25 мая по 6 июня 1944 года с целью
+                                            уничтожения Верховного штаба НОАЮ в городе Дрвар, а также находившихся при нём 
+                                            учреждений народно-освободительного движения Югославии и союзных военных миссий. 
+                                            В операции участвовали 500-й парашютно-десантный батальон СС, а также части 15-го
+                                            горнопехотного армейского корпуса и 5-го горнопехотного корпуса СС.
+                                            
+                                            Операция «Ход конём» являет собой особую веху в войне вермахта против НОАЮ, поскольку
+                                            она имела целью возвращение стратегической инициативы, утраченной после капитуляции
+                                            Италии 8 сентября 1943 года. В результате ожесточённых боёв и ценой высоких потерь
+                                            немецкие войска овладели Дрваром, захватили штаб-квартиру партизан и её систему 
+                                            военной связи, нанесли значительный урон 1-й и 6-й пролетарским дивизиям, а также
+                                            на какое-то время расстроили систему руководства НОАЮ и вынудили югославов временно
+                                            прекратить активность в данном районе. Однако основная цель — уничтожение Верховного
+                                            штаба и самого И. Броза Тито — не была достигнута. Операция стала последней попыткой
+                                            немецкого командования изменить развитие ситуации в Югославии в свою пользу, а также
+                                            единственным случаем безуспешного применения немецкого воздушного десанта во Второй
+                                            мировой войне.
+                                                </Paragraph>
+                                            </Section>
+                                        </TableCell>
+                                    </TableRow>
+                                </TableRowGroup>
+                            </Table>
+                        </FlowDocument>
+                    </FlowDocumentScrollViewer>
+
+                </StackPanel>
+
+            </TabItem>
+            <TabItem Header="Обсуждение"></TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>
