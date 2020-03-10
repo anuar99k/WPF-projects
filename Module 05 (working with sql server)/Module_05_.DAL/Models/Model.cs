@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Module_05_.DAL.Models
 {
-    class Model
+    public class Model
     {
-        public int ModelId { get; set; }
+        public int intModelID { get; set; }
 
-        public string Name { get; set; }
+        public string strName { get; set; }
 
-        public int ManufacturerId { get; set; }
+        public int intManufacturerID { get; set; }
 
-        public int SMCSFamilyId { get; set; }
+        public int intSMCSFamilyID   { get; set; }
 
-        public string Image { get; set; }
+        public string strImage { get; set; }
     }
 }

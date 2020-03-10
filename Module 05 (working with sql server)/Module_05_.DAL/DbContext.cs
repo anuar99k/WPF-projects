@@ -92,11 +92,11 @@ namespace Module_05_.DAL
                     break;
                 case "TablesManufacturer":
                     PK = "intManufacturerID";
-                    id = (data as Manufacturer).ManufacturerId;
+                    id = (data as Manufacturer).intManufacturerID;
                     break;
                 case "TablesModel":
                     PK = "intModelID";
-                    id = (data as Model).ModelId;
+                    id = (data as Model).intModelID;
                     break;
             }
             using (IDbConnection db = new SqlConnection(connectionString))

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Module_05_.DAL.Models
 {
-    class Manufacturer
+    public class Manufacturer
     {
-        public int ManufacturerId { get; set; }
+        public int intManufacturerID { get; set; }
 
-        public string ManufacturerChecklistId { get; set; }
+        public string strManufacturerChecklistId { get; set; }
 
-        public string Name { get; set; }
+        public string strName { get; set; }
     }
 }
