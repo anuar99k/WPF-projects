@@ -11,15 +11,22 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+        
         <Menu Grid.Row="0">
             <MenuItem Header="Equipment"
                       FontSize="14">
+                <MenuItem Header="Показать"
+                          x:Name="miEquipment"
+                          Click="MiEquipment_Click"/>
                 <MenuItem Header="Создать"/>
                 <MenuItem Header="Удалить"/>
                 <MenuItem Header="Сохранить"/>
             </MenuItem>
-            <MenuItem Header="Manufucture"
+            <MenuItem Header="Manufacture"
                       FontSize="14">
+                <MenuItem Header="Показать"
+                          x:Name="miManufacture"
+                          Click="MiManufacture_Click"/>
                 <MenuItem Header="Создать"/>
                 <MenuItem Header="Удалить"/>
                 <MenuItem Header="Сохранить"/>
@@ -30,6 +37,9 @@
             </MenuItem>
             <MenuItem Header="Model"
                       FontSize="14">
+                <MenuItem Header="Показать"
+                          x:Name="miModel"
+                          Click="MiModel_Click"/>
                 <MenuItem Header="Создать"/>
                 <MenuItem Header="Удалить"/>
                 <MenuItem Header="Сохранить"/>
@@ -39,5 +49,8 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
+
+        <Frame Grid.Row="1" x:Name="mainFrame"
+               NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

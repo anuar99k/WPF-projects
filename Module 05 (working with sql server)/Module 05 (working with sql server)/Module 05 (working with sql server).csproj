@@ -67,8 +67,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\MainFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\MainFormPage.xaml.cs">
+      <DependentUpon>MainFormPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +100,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Module_05_.BLL\Module_05_.BLL.csproj">
+      <Project>{657a9faa-18ed-4268-bbae-c5caedfeb798}</Project>
+      <Name>Module_05_.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Module_05_.DAL\Module_05_.DAL.csproj">
+      <Project>{3903f8ae-e629-4d20-94ee-1e42a0712c7d}</Project>
+      <Name>Module_05_.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
