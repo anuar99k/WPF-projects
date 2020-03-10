@@ -7,6 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Equipment"
+                      FontSize="14">
+                <MenuItem Header="Создать"/>
+                <MenuItem Header="Удалить"/>
+                <MenuItem Header="Сохранить"/>
+            </MenuItem>
+            <MenuItem Header="Manufucture"
+                      FontSize="14">
+                <MenuItem Header="Создать"/>
+                <MenuItem Header="Удалить"/>
+                <MenuItem Header="Сохранить"/>
+                <MenuItem Header="Экспорт">
+                    <MenuItem Header="XML"/>
+                    <MenuItem Header="SOAP"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Model"
+                      FontSize="14">
+                <MenuItem Header="Создать"/>
+                <MenuItem Header="Удалить"/>
+                <MenuItem Header="Сохранить"/>
+                <MenuItem Header="Экспорт">
+                    <MenuItem Header="XML"/>
+                    <MenuItem Header="SOAP"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
